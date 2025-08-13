@@ -1,19 +1,27 @@
-import React from 'react';
-import css from './header.module.css';
+import { Link } from "react-router-dom";
+import styles from "./header.module.css";
 
 const Header = () => (
-    <header className={css.portfolioHeader}>
-        <div className={css.container}>
-            <h1>Your Name</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <nav className={styles.nav}>
+    <h1 className={styles.logo}>Moje Portfolio</h1>
+    <ul className={styles.navList}>
+      <li>
+        <Link to="/" className={styles.link}>
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link to="/about" className={styles.link}>
+          About
+        </Link>
+      </li>
+      <li>
+        <Link to="/projects" className={styles.link}>
+          Projects
+        </Link>
+      </li>
+    </ul>
+  </nav>
 );
 
 export default Header;
